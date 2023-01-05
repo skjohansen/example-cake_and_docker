@@ -16,7 +16,6 @@ Task("Build Docker Image")
         BuildArg = arguments
     };
     DockerBuild(settings, ".");
-
 });
 
 Task("Docker information").IsDependentOn("Build Docker Image").Does(()=>{

@@ -9,7 +9,6 @@ Task("Build Docker Image")
         Tag=dockerTags
     };
     DockerBuild(settings, ".");
-
 });
 
 Task("Docker information").IsDependentOn("Build Docker Image").Does(()=>{
